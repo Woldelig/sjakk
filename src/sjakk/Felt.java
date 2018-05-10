@@ -8,14 +8,13 @@ import java.awt.image.BufferedImage;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
-
 public class Felt extends JPanel implements MouseListener {
-	
+
 	protected int xPosisjon;
 	protected int yPosisjon;
 	protected BufferedImage image = null;
 	protected Brett brett;
-
+	Brikke brikke;
 
 	public Felt(int x, int y, Brett brett) {
 
@@ -27,13 +26,22 @@ public class Felt extends JPanel implements MouseListener {
 		setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		addMouseListener(this);
 	}
-	
+
 	private Color kalkulerFarge(int xPosisjon, int yPosisjon) {
 		boolean annenhverRute = (xPosisjon % 2 == 0);
 		boolean annenhverRad = (yPosisjon % 2 == 0);
 		return (annenhverRute != annenhverRad ? Color.GRAY : Color.WHITE);
 	}
 
+	public void setBrikke(Brikke nyBrikke) {
+		this.brikke = nyBrikke;
+		add(nyBrikke);
+	}
+
+	public Brikke getBrikke() {
+
+		return brikke;
+	}
 
 	@Override
 	public void mouseClicked(MouseEvent arg0) {

@@ -9,8 +9,7 @@ public class EntryPoint extends JFrame {
 
 	public static void main(String[] args) {
 		new EntryPoint();
-		 //System.out.println(Character.codePointAt("\u2654", 0));
-		System.out.println("\u2654");
+		/*System.out.println("\u2654");
 		System.out.println("\u2655");
 		System.out.println("\u2656");
 		System.out.println("\u2657");
@@ -23,7 +22,7 @@ public class EntryPoint extends JFrame {
 		System.out.println("\u265C");
 		System.out.println("\u265D");
 		System.out.println("\u265E");
-		System.out.println("\u265F");
+		System.out.println("\u265F");*/
 	}
 
 	public EntryPoint() {
