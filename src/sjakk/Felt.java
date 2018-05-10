@@ -27,10 +27,11 @@ public class Felt extends JPanel implements MouseListener {
 		setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		addMouseListener(this);
 	}
+	
 	private Color kalkulerFarge(int xPosisjon, int yPosisjon) {
 		boolean annenhverRute = (xPosisjon % 2 == 0);
 		boolean annenhverRad = (yPosisjon % 2 == 0);
-		return (annenhverRute != annenhverRad ? Color.BLACK : Color.WHITE);
+		return (annenhverRute != annenhverRad ? Color.GRAY : Color.WHITE);
 	}
 
 
