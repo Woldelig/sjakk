@@ -38,6 +38,11 @@ public class Felt extends JPanel implements MouseListener {
 		add(nyBrikke);
 	}
 
+	public void fjernBrikke() {
+		this.removeAll();
+		this.brikke = null;
+	}
+
 	public Brikke getBrikke() {
 
 		return brikke;
@@ -46,6 +51,12 @@ public class Felt extends JPanel implements MouseListener {
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
 		System.out.println("Du klikket på felt: " + xPosisjon + " " + yPosisjon);
+		System.out.println("Feltet har en " + brikke);
+		if (this.getBrikke() != null) {
+			brett.klikketBrikke(this);
+		} else {
+			brett.klikketFelt(this);
+		}
 
 	}
 

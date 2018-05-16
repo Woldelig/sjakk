@@ -8,8 +8,8 @@ import javax.swing.JLabel;
 
 class Bonde extends Brikke{
 
-	public Bonde(Color farge) {
-		super(farge);
+	public Bonde(Color farge,  Brett brett ) {
+		super(farge, brett);
 		
 		
 		if(farge.equals(Color.BLACK)) {
@@ -22,38 +22,5 @@ class Bonde extends Brikke{
 			brikkeIkon.setFont(new Font("", 0, 60));
 			add(brikkeIkon);
 		}
-
-		addMouseListener(this);
 	}
-
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		System.out.println("Du klikket på en bonde");
-		
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-	
 }

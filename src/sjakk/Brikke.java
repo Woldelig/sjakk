@@ -9,15 +9,17 @@ import javax.swing.JPanel;
 
 
 
-public abstract class Brikke extends JPanel implements MouseListener {
+public abstract class Brikke extends JPanel{
 
 	Color farge;
 	JLabel brikkeIkon;
+	Brett brett;
 
 	
 
-	public Brikke(Color farge) {
+	public Brikke(Color farge, Brett brett) {
 		this.farge = farge;
+		this.brett = brett;
 		
 		setOpaque(false);
 	}

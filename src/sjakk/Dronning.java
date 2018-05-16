@@ -8,8 +8,8 @@ import javax.swing.JLabel;
 
 class Dronning extends Brikke{
 
-	public Dronning(Color farge) {
-		super(farge);
+	public Dronning(Color farge, Brett brett) {
+		super(farge, brett);
 		
 		
 		if(farge.equals(Color.BLACK)) {
@@ -22,38 +22,5 @@ class Dronning extends Brikke{
 			brikkeIkon.setFont(new Font("", 0, 60));
 			add(brikkeIkon);
 		}
-
-		addMouseListener(this);
 	}
-
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		System.out.println("Du klikket på en dronning");
-		
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-	
 }
