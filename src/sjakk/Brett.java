@@ -21,26 +21,26 @@ public class Brett extends JPanel {
 		}
 		leggBrikker(Sjakkbrett);
 	}
-	
+
 	protected void klikketBrikke(Felt felt) {
 		Markertfelt = felt;
 	}
-	
+
 	protected void klikketFelt(Felt felt) {
-		if(Markertfelt == null) {
+		if (Markertfelt == null) {
 			return;
 		}
 		felt.setBrikke(Markertfelt.getBrikke());
 		Markertfelt.fjernBrikke();
-		
-		Markertfelt = null;	
+
+		Markertfelt = null;
 		repaint();
 	}
 
 	private void leggBrikker(Felt[][] sjakkbrett) {
 
 		boolean erHvit = false;
-		
+
 		for (int rekke = 0, bondeRekke = 1; rekke < 8; rekke += 7, bondeRekke += 5) {
 			for (int i = 0; i <= 7; i++) {
 				Sjakkbrett[bondeRekke][i].setBrikke(new Bonde((erHvit) ? Color.WHITE : Color.BLACK, this));
